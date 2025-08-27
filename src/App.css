@@ -1,16 +1,30 @@
-.app {
-  text-align: center;
-  margin-top: 5rem;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url('/background.jpeg'); /* place your image in public folder */
+  background-size: cover;       /* makes image cover entire viewport */
+  background-position: center;  /* center image */
+  background-repeat: no-repeat; /* prevents tiling */
+  display: flex;
+  justify-content: center;      /* horizontal center */
+  align-items: center;          /* vertical center */
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  color: #333;
+.app {
+  text-align: center;
+  background: rgba(0,0,0,0.5); /* optional: semi-transparent overlay for contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  color: #fff; /* text color */
 }
 
-p {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+h1 {
+  margin-bottom: 1rem;
 }
 
 .buttons button {
@@ -26,10 +40,12 @@ p {
 .buttons button:hover {
   opacity: 0.8;
 }
+
 .buttons button:active {
   transform: scale(0.95);
 }
+
 .buttons button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-} 
+}
